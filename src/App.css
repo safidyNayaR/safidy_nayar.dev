@@ -1,0 +1,147 @@
+/* Bases */
+.app {
+    text-align: center;
+}
+
+#particles {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Fonts */
+
+.font-Courier {
+    font-family: 'Courier Prime', sans-serif;
+}
+
+.font-Montserrat {
+    font-family: 'Montserrat', serif;
+}
+
+.font-Inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-Space {
+    font-family: 'Space Grotesk', serif;
+}
+
+/* Link animation */
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+.link-underline:hover {
+    cursor: pointer;
+}
+
+/* Slide Down animation */
+@keyframes slideDownFade {
+    0% {
+    opacity: 0;
+    transform: translateY(-40px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.animate-slide-down {
+    opacity: 0;
+    animation: slideDownFade 2s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-delay: 1.5s;
+}
+
+/* Fade in Animation - button  */
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    visibility: hidden;
+    }
+    100% {
+    opacity: 1;
+    visibility: visible;
+    }
+}
+
+.animate-fade-in {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.delay-3 {
+    animation-delay: 2.5s;
+}
+
+.delay-4 {
+    animation-delay: 3.5s;
+}
+
+.delay-5 {
+    animation-delay: 4.5s;
+}
+
+.delay-all {
+    animation-delay: 10s;
+}
+
+/* PETITE ANIMATION DE SCROLL VERS GAUCHE */
+
+.go {
+  display: inline-block;
+  animation: scroll-left 0.9s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* Animation grow */
+@keyframes grow {
+  from {
+    opacity: 0;
+    transform: scale(0.5); 
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-grow {
+  animation: grow 1s ease-out forwards;
+}
